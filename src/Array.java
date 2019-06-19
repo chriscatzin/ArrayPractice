@@ -1,25 +1,22 @@
-import java.util.Scanner;
-
 public class Array {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        final int NUM_ARRAY = 3;
-        int[] array = new int[NUM_ARRAY];
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Enter the hours worked by "+
-                        NUM_ARRAY + " employees.");
+        final int NUMBER = 50;
+        for (int index = 1; index <= 50; index++) {
+            if (index % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (index % 5 == 0) {
+                System.out.println("Buzz");
+            } else if (index % 5 == 0 && index % 3 == 0) {
+                System.out.println("FizzBuzz");
+            } else {
+                System.out.println(index);
+            }
 
-        for(int index = 0; index < NUM_ARRAY; index++)
-        {
-            System.out.print("Employee " + (index + 1) + ": ");
-            array[index] = keyboard.nextInt();
-        }
 
-        System.out.println("The array you entered is: ");
-        for(int index = 0; index < NUM_ARRAY; index++)
-        {
-            System.out.println(array[index]);
         }
     }
 }
+
+
